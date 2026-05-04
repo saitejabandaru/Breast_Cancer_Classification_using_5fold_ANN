@@ -71,7 +71,7 @@ The workflow includes:
 
 ## Dataset
 
-The dataset contains 30 diagnostic tumor features such as:
+The dataset contains 30 diagnostic tumor features such as but not limited to:
 
 * Radius
 * Texture
