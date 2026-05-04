@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Predict Breast Cancer</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <nav class="top-nav">
+        <h2>Breast Cancer Prediction</h2>
+        <a href="/">Home</a>
+    </nav>
+
+    <div class="form-container">
+        <div class="intro-box">
+            <h1>Enter Tumor Feature Values</h1>
+            <p>
+                Fill in the feature values below. These values are generally available from medical datasets,
+                diagnostic measurements, or research records.
+            </p>
+        </div>
+
+        <form method="POST" action="/predict">
+
+            <div class="section-card">
+                <h2>Patient / Researcher Name</h2>
+                <div class="input-grid single">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" name="name" placeholder="Enter name" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <h2>Mean Features</h2>
+                <div class="input-grid">
+                    {% for feature in mean_features %}
+                    <div class="form-group">
+                        <label>{{ feature }}</label>
+                        <input type="number" step="any" name="{{ feature }}" required>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="section-card">
+                <h2>SE Features</h2>
+                <div class="input-grid">
+                    {% for feature in se_features %}
+                    <div class="form-group">
+                        <label>{{ feature }}</label>
+                        <input type="number" step="any" name="{{ feature }}" required>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="section-card">
+                <h2>Worst Features</h2>
+                <div class="input-grid">
+                    {% for feature in worst_features %}
+                    <div class="form-group">
+                        <label>{{ feature }}</label>
+                        <input type="number" step="any" name="{{ feature }}" required>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="button-box">
+                <button type="submit">Predict</button>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>

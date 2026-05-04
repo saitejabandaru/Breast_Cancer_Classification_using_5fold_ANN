@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Result - Benign</title>
+
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon_1.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <div class="result-page benign-page">
+        <div class="result-card">
+            <h1>{{ name }}, your breast cancer prediction result is <strong>Benign</strong></h1>
+
+            <p>
+                Benign breast conditions are non-cancerous and are very common.
+                Unlike breast cancers, benign breast conditions are not life-threatening.
+                However, some benign conditions may still require medical follow-up depending on the case.
+            </p>
+
+            <hr>
+
+            <h3>To know more details, follow these links</h3>
+
+            <ul class="link-list">
+                <li><a href="https://www.cancer.org/cancer/types/breast-cancer/non-cancerous-breast-conditions.html" target="_blank">Link 1</a></li>
+                <li><a href="https://www.breastcancer.org/benign-breast-conditions" target="_blank">Link 2</a></li>
+                <li><a href="https://www.hopkinsmedicine.org/health/conditions-and-diseases/common-benign-lumps" target="_blank">Link 3</a></li>
+            </ul>
+
+            <a href="/predict" class="btn-main">Make Another Prediction</a>
+        </div>
+    </div>
+
+</body>
+</html>

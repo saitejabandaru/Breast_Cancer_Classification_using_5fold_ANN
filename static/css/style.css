@@ -1,0 +1,468 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #1f2937;
+    background: #f3f6fb;
+}
+
+/* Remove number input arrows */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* =========================
+   HOME PAGE
+========================= */
+
+.landing-page {
+    min-height: 100vh;
+    background:
+        linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(30, 41, 59, 0.92)),
+        radial-gradient(circle at top left, #3b82f6, transparent 30%),
+        radial-gradient(circle at bottom right, #ec4899, transparent 28%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.landing-card {
+    width: 88vw;
+    max-width: 1500px;
+    min-height: 640px;
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 34px;
+    padding: 60px 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+    box-shadow: 0 35px 90px rgba(0, 0, 0, 0.38);
+}
+
+.left-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.model-badge {
+    width: fit-content;
+    background: #dbeafe;
+    color: #1d4ed8;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 900;
+    margin-bottom: 22px;
+}
+
+.left-content h1 {
+    font-size: 60px;
+    line-height: 1.05;
+    margin: 0 0 22px;
+    color: #020617;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+}
+
+.main-text {
+    font-size: 20px;
+    line-height: 1.7;
+    color: #334155;
+    margin: 0 0 16px;
+}
+
+.sub-text {
+    background: #eff6ff;
+    border-left: 6px solid #2563eb;
+    padding: 20px 22px;
+    border-radius: 16px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #334155;
+    margin: 14px 0 30px;
+}
+
+.start-btn {
+    width: fit-content;
+    padding: 16px 38px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 14px;
+    font-size: 18px;
+    font-weight: 900;
+    transition: 0.2s ease;
+}
+
+.start-btn:hover {
+    background: #1d4ed8;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.right-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 22px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.stat-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 32px;
+    text-align: center;
+}
+
+.stat-card.wide {
+    grid-column: span 2;
+}
+
+.stat-card h2 {
+    margin: 0;
+    color: #2563eb;
+    font-size: 42px;
+    font-weight: 900;
+}
+
+.stat-card p {
+    margin: 8px 0 0;
+    color: #475569;
+    font-weight: 800;
+    font-size: 15px;
+}
+
+.workflow-card {
+    background: #f8fafc;
+    border-radius: 22px;
+    padding: 30px;
+    border: 1px solid #e2e8f0;
+}
+
+.workflow-card h3 {
+    margin: 0 0 18px;
+    color: #020617;
+    font-size: 26px;
+    font-weight: 900;
+}
+
+.workflow-step {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: white;
+    padding: 14px 16px;
+    border-radius: 13px;
+    margin-bottom: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+.workflow-step:last-child {
+    margin-bottom: 0;
+}
+
+.workflow-step span {
+    color: #2563eb;
+    font-weight: 900;
+    font-size: 15px;
+}
+
+.workflow-step p {
+    margin: 0;
+    color: #334155;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.warning-box {
+    background: #fff7ed;
+    color: #9a3412;
+    border-left: 6px solid #f97316;
+    padding: 16px 18px;
+    border-radius: 14px;
+    font-weight: 900;
+    font-size: 15px;
+    text-align: center;
+}
+
+
+/* =========================
+   PREDICTION PAGE
+========================= */
+
+.top-nav {
+    background: #111827;
+    color: white;
+    padding: 18px 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-nav h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.top-nav a {
+    color: white;
+    background: #2563eb;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: 800;
+}
+
+.form-container {
+    max-width: 1200px;
+    margin: 35px auto;
+    padding: 0 25px;
+}
+
+.intro-box {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    margin-bottom: 25px;
+}
+
+.intro-box h1 {
+    margin-top: 0;
+    font-weight: 900;
+    color: #111827;
+}
+
+.intro-box p {
+    color: #6b7280;
+    font-size: 17px;
+}
+
+.section-card {
+    background: white;
+    padding: 28px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.section-card h2 {
+    margin-top: 0;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #e5e7eb;
+    font-weight: 900;
+    color: #111827;
+}
+
+.input-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.input-grid.single {
+    grid-template-columns: 1fr;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 800;
+    margin-bottom: 7px;
+    color: #374151;
+}
+
+.form-group input {
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.button-box {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.button-box button {
+    padding: 15px 42px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.button-box button:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   RESULT PAGES
+========================= */
+
+.result-page {
+    min-height: 100vh;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.benign-page {
+    background: linear-gradient(135deg, #dcfce7, #ffffff);
+}
+
+.malignant-page {
+    background: linear-gradient(135deg, #fee2e2, #ffffff);
+}
+
+.result-card {
+    max-width: 950px;
+    background: white;
+    padding: 45px;
+    border-radius: 24px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+.result-card h1 {
+    font-size: 34px;
+    font-weight: 900;
+    margin-bottom: 22px;
+    color: #111827;
+}
+
+.result-card p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #374151;
+}
+
+.result-card strong {
+    text-transform: uppercase;
+}
+
+.warning-text {
+    background: #fff1f2;
+    border-left: 5px solid #dc2626;
+    padding: 16px;
+    border-radius: 10px;
+    color: #991b1b !important;
+    font-weight: 800;
+}
+
+.link-list {
+    list-style-type: none;
+    width: fit-content;
+    margin: 20px 0;
+    padding: 0;
+    display: flex;
+    background-color: #333333;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.link-list li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px 22px;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.link-list li a:hover {
+    background-color: #111111;
+    color: white;
+}
+
+.danger-btn {
+    background: #dc2626;
+}
+
+.danger-btn:hover {
+    background: #b91c1c;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+    .home-one-page {
+        min-height: auto;
+        padding: 24px;
+    }
+
+    .home-panel {
+        padding: 30px 24px;
+    }
+
+    .home-panel h1 {
+        font-size: 30px;
+    }
+
+    .feature-row,
+    .content-grid,
+    .mini-steps,
+    .input-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .top-nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .result-page {
+        padding: 24px;
+    }
+
+    .result-card {
+        padding: 30px;
+    }
+
+    .result-card h1 {
+        font-size: 27px;
+    }
+
+    .link-list {
+        flex-direction: column;
+        width: 100%;
+    }
+}

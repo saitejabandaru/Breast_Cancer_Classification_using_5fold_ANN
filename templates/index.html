@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Breast Cancer Prediction System</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <section class="landing-page">
+
+        <div class="landing-card">
+
+            <div class="left-content">
+                <span class="model-badge">5-Fold ANN Ensemble</span>
+
+                <h1>Breast Cancer Prediction System</h1>
+
+                <p class="main-text">
+                    A machine learning web application that predicts whether a breast tumor is
+                    <strong>Benign</strong> or <strong>Malignant</strong> using diagnostic tumor features.
+                </p>
+
+                <p class="sub-text">
+                    This system is mainly intended for researchers, students, and medical data analysts,
+                because the model requires detailed tumor feature values such as radius, texture,
+                perimeter, area, smoothness, compactness, concavity, and related diagnostic measurements.
+                A normal person usually will not have direct access to all these values without a medical dataset
+                or diagnostic report.
+                </p>
+
+                <a href="/predict" class="start-btn">Start Prediction</a>
+            </div>
+
+            <div class="right-content">
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h2>30</h2>
+                        <p>Input Features</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h2>5</h2>
+                        <p>ANN Models</p>
+                    </div>
+
+                    <div class="stat-card wide">
+                        <h2>98.25%</h2>
+                        <p>Ensemble Test Accuracy</p>
+                    </div>
+                </div>
+
+                <div class="workflow-card">
+                    <h3>How it works</h3>
+
+                    <div class="workflow-step">
+                        <span>01</span>
+                        <p>Enter tumor feature values</p>
+                    </div>
+
+                    <div class="workflow-step">
+                        <span>02</span>
+                        <p>Each fold model scales and predicts</p>
+                    </div>
+
+                    <div class="workflow-step">
+                        <span>03</span>
+                        <p>Predictions are averaged</p>
+                    </div>
+
+                    <div class="workflow-step">
+                        <span>04</span>
+                        <p>Final result is Benign or Malignant</p>
+                    </div>
+                </div>
+
+                <div class="warning-box">
+                    Educational and research purpose only. Not a final medical diagnosis.
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+</html>
